@@ -32,3 +32,6 @@ task1.sql
 
 --2 query 
 SELECT e.first_name, e.last_name, d.depart_name, l.city, l.state_province FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id;
+
+--3 query
+SELECT e.first_name, e.last_name, e.department_id, d.depart_name FROM employees e JOIN departments d ON e.department_id = d.department_id WHERE e.department_id IN (40, 80);
