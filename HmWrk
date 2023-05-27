@@ -49,3 +49,8 @@ SELECT j.job_title, e.first_name || ' ' || e.last_name AS "Full Name", (j.max_sa
 --7 query 
 
 SELECT j.job_title, AVG(e.salary) AS "Average Salary" FROM employees e JOIN jobs j ON e.job_id = j.job_id GROUP BY j.job_title;
+
+
+--8 
+
+SELECT e.first_name || ' ' || e.last_name AS "Full Name", e.salary FROM employees e JOIN departments d ON e.department_id = d.department_id JOIN locations l ON d.location_id = l.location_id WHERE l.city = 'London';
